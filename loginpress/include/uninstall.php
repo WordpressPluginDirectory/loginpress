@@ -8,19 +8,11 @@
  * @version  3.0.0
  */
 
-// Exit if accessed directly.
-if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
-	exit;
-}
-
 $loginpress_setting   = get_option( 'loginpress_setting' );
 $loginpress_uninstall = isset( $loginpress_setting['loginpress_uninstall'] ) ? $loginpress_setting['loginpress_uninstall'] : 'off';
 if ( 'on' != $loginpress_uninstall ) {
 	return;
 }
-
-// Load the LoginPress file.
-require_once 'loginpress.php';
 
 // Array of Plugin's Option.
 $loginpress_uninstall_options = array(
